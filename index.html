@@ -55,7 +55,36 @@ GPL pour le code ActionScript</p>
 
 <h2>Demo</h2>
 
-<p><a href="http://www.marcbuils.fr/2011/09/webcamqrcode-scannez-les-codes-qr.html">http://www.marcbuils.fr/2011/09/webcamqrcode-scannez-les-codes-qr.html</a></p>
+WebcamQRCode View:<br />
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/jquery.webcamqrcode.min.js"></script>
+<script>
+(function($){
+	$('document').ready(function(){
+		$('#qrcodebox').WebcamQRCode({
+			onQRCodeDecode: function( p_data ){
+					$('#qrcode_result').html( p_data );
+			}
+		});
+		
+		$('#btn_start').click(function(){
+			$('#qrcodebox').WebcamQRCode().start();
+		});
+		
+		$('#btn_stop').click(function(){
+			$('#qrcodebox').WebcamQRCode().stop();
+		});
+	});
+})(jQuery);
+</script>
+<div style="width: 350px; height: 350px;" id="qrcodebox">
+</div>
+<input type="button" value="Start" id="btn_start" /> 
+<input type="button" value="Stop" id="btn_stop" />
+<p>
+Last QRCode value: <span id="qrcode_result">none</span>
+</p>
+
         </section>
 
         <footer>
