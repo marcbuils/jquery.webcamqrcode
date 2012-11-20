@@ -43,7 +43,7 @@ Ce plugin a été développé à l'origine afin de scanner le code barre de prod
 <p>ATTENTION: Ce plugin n'est plus maintenu car le code FLEX de LOGOSWARE sur lequel s'appui le plugin n'est pas compatible avec les version récente du player Flash.</p>
 
 <h2>Demo</h2>
-
+<h3>Result</h3>
 WebcamQRCode View:<br />
 <script src="javascripts/jquery.min.js"></script>
 <script src="javascripts/jquery.webcamqrcode.min.js"></script>
@@ -73,6 +73,38 @@ WebcamQRCode View:<br />
 <p>
 Last QRCode value: <span id="qrcode_result">none</span>
 </p>
+
+<h3>Sources</h3>
+<pre>
+WebcamQRCode View:
+&gt;div style="width: 350px; height: 350px;" id="qrcodebox"&gt;
+&gt;/div&gt;
+
+&gt;input type="button" value="Start" id="btn_start" /&gt; 
+&gt;input type="button" value="Stop" id="btn_stop" /&gt;
+
+&gt;p&gt;
+Last QRCode value: &gt;span id="qrcode_result"&gt;none&gt;/span&gt;
+&gt;/p&gt;
+
+&gt;script&gt;
+	$('document').ready(function(){
+		$('#qrcodebox').WebcamQRCode({
+			onQRCodeDecode: function( p_data ){
+					$('#qrcode_result').html( p_data );
+			}
+		});
+		
+		$('#btn_start').click(function(){
+			$('#qrcodebox').WebcamQRCode().start();
+		});
+		
+		$('#btn_stop').click(function(){
+			$('#qrcodebox').WebcamQRCode().stop();
+		});
+	});
+&gt;/script&gt;
+</pre>
 
 <h2>Autheur</h2>
 
