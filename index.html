@@ -77,17 +77,17 @@ Last QRCode value: <span id="qrcode_result">none</span>
 <h3>Sources</h3>
 <pre>
 WebcamQRCode View:
-&gt;div style="width: 350px; height: 350px;" id="qrcodebox"&gt;
-&gt;/div&gt;
+&lt;div style="width: 350px; height: 350px;" id="qrcodebox"&gt;
+&lt;/div&gt;
 
-&gt;input type="button" value="Start" id="btn_start" /&gt; 
-&gt;input type="button" value="Stop" id="btn_stop" /&gt;
+&lt;input type="button" value="Start" id="btn_start" /&gt; 
+&lt;input type="button" value="Stop" id="btn_stop" /&gt;
 
-&gt;p&gt;
-Last QRCode value: &gt;span id="qrcode_result"&gt;none&gt;/span&gt;
-&gt;/p&gt;
+&lt;p&gt;
+Last QRCode value: &lt;span id="qrcode_result"&gt;none&lt;/span&gt;
+&lt;/p&gt;
 
-&gt;script&gt;
+&lt;script&gt;
 	$('document').ready(function(){
 		$('#qrcodebox').WebcamQRCode({
 			onQRCodeDecode: function( p_data ){
@@ -103,7 +103,7 @@ Last QRCode value: &gt;span id="qrcode_result"&gt;none&gt;/span&gt;
 			$('#qrcodebox').WebcamQRCode().stop();
 		});
 	});
-&gt;/script&gt;
+&lt;/script&gt;
 </pre>
 
 <h2>Autheur</h2>
