@@ -17,4 +17,4 @@ GPL pour le code ActionScript
 v1.0.1
 
 ##Demo
-http://blog.marcbuils.fr/2011/09/webcamqrcode-scannez-les-codes-qr.html
+http://marcbuils.github.io/jquery.webcamqrcode/
