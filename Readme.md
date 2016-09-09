@@ -1,3 +1,6 @@
+## This plugin is deprecated.
+You can use html5-qrcode to replace it (https://dwa012.github.io/html5-qrcode/)
+
 #WebcamQRCode
 ##Scannez les codes QR à partir de votre site web
 WebcamQRCode est un plugin jQuery qui utilise la webcam de l'utilisateur pour scanner un code QR et de retourner le résultat au Javascript afin d'être traité.
